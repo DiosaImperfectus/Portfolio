@@ -1,26 +1,30 @@
 import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+
+//To force app to ignore warning boxes, uses the following code:
+//import { LogBox } from 'react-native';
+// LogBox.ignoreAllLogs(true);
+
+//C:\Program Files\Android\Android Studio
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen
-        name="index"
-        options={{
-          title: "Home",
-          headerStyle: { backgroundColor: "#fff" },
-          headerTintColor: "#031a44",
-          headerTitleStyle: { fontWeight: "bold" },
-        }}
-      />
-      <Stack.Screen
-        name="about"
-        options={{
-          title: "About",
-          headerStyle: { backgroundColor: "#fff" },
-          headerTintColor: "#031a44",
-          headerTitleStyle: { fontWeight: "bold" },
-        }}
-      />
-    </Stack>
+    <>
+      <StatusBar style="auto" />
+      <Stack>
+        <Stack.Screen
+          name="(tabs)"
+          options={{
+          headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="+not-found"
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack>
+    </>
   );
 }
