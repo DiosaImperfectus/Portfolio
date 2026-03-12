@@ -3,11 +3,14 @@ import { Link, Stack } from "expo-router";
 
 export default function NotFoundScreen() {
     return (
+       <>
+      <Stack.Screen options={{ title: 'Oops! Not Found' }} />
         <View style={styles.container}>
             <Text style={styles.text}>Oops!!!</Text>
             <Text style={styles.text}>Page NOT FOUND.</Text>
             <Link href="/" style={styles.button}>Go to Home Screen</Link>
         </View>
+        </>
     );
 }
 
